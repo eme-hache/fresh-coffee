@@ -1,8 +1,11 @@
 ## Prisma commands
 
+Commands used to start up project database. Previuosly...
+
 -To syncrhonize main database with models use '''npx prisma migrate dev'''
 -To delete all inserted data in dev mode use '''npx prisma migrate reset'''
 -To see each database tables in web browser use '''npx prisma studio'''
+-To seed the database use '''npx prisma db seed'''
 
 ## Learn More
 
