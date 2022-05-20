@@ -32,7 +32,7 @@ export default function Layout({ children, page }) {
             </Head>
 
             <div className='md:flex'>
-                <aside className='md:w-4/12 xl:w-1/4 2xl:w-1/5'>
+                <aside className='md:w-4/12 xl:w-1/4 2xl:w-1/5 bg-gray-50 border-r flex flex-col'>
                     <Sidebar />
                 </aside>
 

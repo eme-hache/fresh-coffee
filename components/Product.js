@@ -7,7 +7,7 @@ export default function Product({ product }) {
     const { name, imageUrl, price } = product
 
     return (
-        <div className='border p-3'>
+        <div className='border p-3 flex flex-col'>
             <Image
                 src={`/assets/img/${imageUrl}.jpg`}
                 alt={`Imagen platillo ${name}`}
@@ -15,7 +15,7 @@ export default function Product({ product }) {
                 height={500}
             />
 
-            <div className='p-5'>
+            <div className='p-5 flex-1 flex flex-col'>
                 <h3 className='text-2xl font-bold'>
                     {name}
                 </h3>
@@ -24,16 +24,18 @@ export default function Product({ product }) {
                     {moneyFormat(price)}
                 </p>
 
-                <button
-                    type='button'
-                    className='bg-indigo-600 hover:bg-indigo-800 text-white w-full mt-5 p-3 uppercase font-bold'
-                    onClick={() => {
-                        handleClickProduct(product)
-                        handleClickModal()
-                    }}
-                >
-                    Agregar
-                </button>
+                <div className='flex flex-1 items-end justify-end'>
+                    <button
+                        type='button'
+                        className='bg-indigo-600 hover:bg-indigo-800 text-white w-full mt-5 p-3 uppercase font-bold'
+                        onClick={() => {
+                            handleClickProduct(product)
+                            handleClickModal()
+                        }}
+                    >
+                        Agregar
+                    </button>
+                </div>
             </div>
         </div>
     )
