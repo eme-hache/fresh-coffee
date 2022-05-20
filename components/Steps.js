@@ -27,7 +27,7 @@ export default function Step() {
                 {steps.map(step => (
                     <button
                         key={step.step}
-                        className='text-2xl font-bold'
+                        className='text-base md:text-2xl font-bold'
                         onClick={() => router.push(step.url)}
                     >
                         {step.name}

@@ -7,6 +7,7 @@ export const FreshCoffeContext = createContext()
 
 export default function FreshCoffeProvider({ children }) {
     const [currentCategory, setCurrentCategory] = useState({})
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [categories, setCategories] = useState([])
     const [userName, setUserName] = useState('')
     const [product, setProduct] = useState({})
@@ -25,8 +26,13 @@ export default function FreshCoffeProvider({ children }) {
         }
     }
 
+    const handleMenuToggle = () => {
+        setIsMenuOpen(!isMenuOpen)
+    }
+
     const handleClickCategory = category => {
         setCurrentCategory(category)
+        setIsMenuOpen(false)
         router.push('/')
     }
 
@@ -102,11 +108,13 @@ export default function FreshCoffeProvider({ children }) {
                 modal,
                 product,
                 userName,
+                isMenuOpen,
                 categories,
                 currentCategory,
                 placeOrder,
                 setUserName,
                 handleOrder,
+                handleMenuToggle,
                 handleClickModal,
                 handleClickProduct,
                 handleClickCategory,

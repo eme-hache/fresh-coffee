@@ -8,10 +8,10 @@ export default function Summary() {
     return (
         <Layout page='Resumen'>
             <h1 className='text-4xl font-black'>Resumen</h1>
-            <p className='text-2xl my-10'>Revisa tu Pedido</p>
+            <p className='text-xl md:text-2xl mt-10 mb-5'>Revisa tu Pedido</p>
 
             {order.length === 0 ? (
-                <p className='text-center text-2xl'>No hay elementos en tu pedido</p>
+                <p className='text-center text-xl md:text-2xl'>No hay elementos en tu pedido</p>
             ) : (
                 order.map(product => (
                     <ProductSummary key={product.id} product={product} />

@@ -7,7 +7,7 @@ export default function Product({ product }) {
     const { name, imageUrl, price } = product
 
     return (
-        <div className='border p-3 flex flex-col'>
+        <div className='border p-3 flex flex-col max-w-md'>
             <Image
                 src={`/assets/img/${imageUrl}.jpg`}
                 alt={`Imagen platillo ${name}`}
