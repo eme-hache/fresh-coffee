@@ -1,4 +1,5 @@
 import { useState, useEffect, createContext } from 'react'
+import { toast } from 'react-toastify'
 import axios from 'axios'
 
 export const FreshCoffeContext = createContext()
@@ -36,9 +37,13 @@ export default function FreshCoffeProvider({ children }) {
         if (order.some(item => item.id === product.id)) {
             const updatedOrder = order.map(item => item.id === product.id ? product : item)
             setOrder(updatedOrder)
+
+            toast.success('Guardado Correactamente')
         }
         else {
             setOrder([ ...order, product])
+
+            toast.success('Agregado al Carrito')
         }
 
         setModal(false)
