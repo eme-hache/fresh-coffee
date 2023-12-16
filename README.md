@@ -1,17 +1,40 @@
-## Prisma commands
+# Fresh Coffee
 
-Commands used to start up project database. Previuosly...
+This project is built with Next.js and Tailwind CSS using Axios to fetch data on a PostgreSQL database
 
--To syncrhonize main database with models use '''npx prisma migrate dev'''
--To delete all inserted data in dev mode use '''npx prisma migrate reset'''
--To see each database tables in web browser use '''npx prisma studio'''
--To seed the database use '''npx prisma db seed'''
+## Demo
 
-## Learn More
+[https://fresh-coffee-eme-hache.vercel.app/](https://fresh-coffee-eme-hache.vercel.app/)
 
-To learn more about Next.js, take a look at the following resources:
+## Environment Variables
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+You will need to add the following environment variable to your .env file
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+`DATABASE_URL`
+
+## Local Development
+
+To run this project, you'll need to set up a local development environment with a `PostgreSQL` database 
+
+Once the database is online, follow these steps to prepare the database for seeding:
+
+1. Run the Prisma migration command:
+
+   ```bash
+   npx prisma migrate dev --name init
+   ```
+2. Run the `seed` script in the `package.json` to populate the database, or:
+
+    ```bash
+    ts-node prisma/seed.ts
+    ```
+3. Run `npm run dev` to start a development Next.js server
+
+## Screenshots
+
+<div align="center">
+  
+  ![Fresh Coffee](/public/screenshots/screenshot-1.png)
+  ![Fresh Coffee](/public/screenshots/screenshot-2.png)
+  
+</div>
