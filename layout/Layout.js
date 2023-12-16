@@ -27,8 +27,8 @@ export default function Layout({ children, page }) {
     return (
         <>
             <Head>
-                <title>Café - {page}</title>
-                <meta name='description' content='Fresh Coffe' />
+                <title>{page !== undefined ? `Fresh Coffee - ${page}` : ''}</title>
+                <meta name='description' content='Fresh Coffee' />
             </Head>
 
             <div className='md:flex'>

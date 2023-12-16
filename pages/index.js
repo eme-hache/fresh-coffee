@@ -6,7 +6,7 @@ export default function Home() {
   const { currentCategory } = useCoffe()
 
   return (
-    <Layout page={`Menú ${currentCategory?.name}`}>
+    <Layout page={`Menú ${currentCategory?.name || ''}`}>
       <h1 className='text-4xl font-black'>{currentCategory?.name}</h1>
 
       <p className='text-xl md:text-2xl mt-10 mb-5'>Elige y personaliza tu pedido a continuación</p>
